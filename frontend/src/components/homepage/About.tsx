@@ -1,7 +1,6 @@
 // src/components/homepage/About.tsx
 'use client'
 import '../../styles/homepage/About.css'
-import Image from 'next/image';
 
 export default function About() {
  return (
@@ -19,12 +18,11 @@ export default function About() {
        </div>
 
        <div className="about-image">
-         <Image
+         <img
           src="/images/about-bjj.jpg"
           alt="Jiu-jitsu em ação"
-          width={500}
-          height={300}
-          className="object-cover"
+          width="500"
+          height="300"
         />
        </div>
      </div>

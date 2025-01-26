@@ -1,7 +1,6 @@
 'use client'
 import React from 'react';
 import { Instagram, Youtube, Mail, MapPin, Phone } from 'lucide-react';
-import Image from 'next/image';
 import Link from 'next/link';
 import '@/styles/homepage/Footer.css';
 
@@ -37,11 +36,11 @@ const Footer = () => {
           {/* Logo and Description */}
           <div>
             <Link href="/" className="footer-logo inline-block">
-              <Image
+              <img
                 src="/images/rnbjj-logo.png"
                 alt="RN BJJ TV Logo"
-                width={120}
-                height={40}
+                width="120"
+                height="40"
                 className="h-10 w-auto"
               />
             </Link>

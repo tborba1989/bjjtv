@@ -19,7 +19,9 @@ const nextConfig: NextConfig = {
         hostname: 'localhost',
       }
     ],
-  }
+  },
+  // Configuração para static export
+  output: 'export',
 };
 
 export default nextConfig;
