@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import React, { useState, useEffect } from 'react';
 import Slider from 'react-slick';
@@ -20,15 +20,16 @@ const EventCard: React.FC<Event> = ({ id, data, nome, local, horario, imagem_url
   const eventDate = new Date(data);
   const day = eventDate.getDate();
   const month = eventDate.toLocaleDateString('pt-BR', { month: 'short' }).toUpperCase();
+  const [imgError, setImgError] = useState(false);
 
   return (
     <div className="event-card bg-white rounded-lg shadow-lg overflow-hidden">
       <div className="relative">
         <img
-          src={imagem_url || '/images/banner-event.webp'}
+          src={imgError ? '/images/banner-event.webp' : imagem_url}
           alt={nome}
           className="w-full h-64 object-cover"
-          onError={(e) => (e.currentTarget.src = '/images/banner-event.webp')}
+          onError={() => setImgError(true)}
         />
         <div className="absolute bottom-0 left-0 bg-yellow-400 p-3 text-center">
           <div className="text-4xl font-bold">{day}</div>
@@ -59,13 +60,14 @@ const Events: React.FC = () => {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/competicoes');
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/competicoes`);
         if (!response.ok) {
           throw new Error('Erro ao carregar competições');
         }
         const data = await response.json();
         setEvents(data);
       } catch (err) {
+        console.error('Erro ao carregar competições:', err);
         setError('Erro ao carregar os dados.');
       } finally {
         setLoading(false);

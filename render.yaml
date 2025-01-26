@@ -2,7 +2,7 @@
 services:
   # Frontend service
   - type: web
-    name: bjjtv-frontend
+    name: bjjtv
     env: node
     buildCommand: cd frontend && npm install && npm run build
     startCommand: cd frontend && npm start
@@ -10,11 +10,11 @@ services:
       - key: NODE_ENV
         value: production
       - key: NEXT_PUBLIC_API_URL
-        value: https://bjjtv.onrender.com
+        value: https://bjjtv.onrender.com,https://bjjtv.com.br
 
   # Backend service
   - type: web
-    name: bjjtv-backend
+    name: bjjtv
     env: python
     buildCommand: cd backend && pip install -r requirements.txt
     startCommand: cd backend && gunicorn wsgi:app
@@ -26,6 +26,6 @@ services:
       - key: SECRET_KEY
         value: chave_super_secreta_rnbjjtv
       - key: CORS_ORIGINS
-        value: https://bjjtv.onrender.com,http://localhost:3000
+        value: https://bjjtv.onrender.com,https://bjjtv.com.br,http://localhost:3000
       - key: PYTHON_VERSION
         value: 3.11.7
