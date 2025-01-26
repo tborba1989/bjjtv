@@ -3,6 +3,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin, FaYoutube, FaGlobe } from 'react-icons/fa';
+import Image from 'next/image';
 
 import 'swiper/css';
 import 'swiper/css/navigation';

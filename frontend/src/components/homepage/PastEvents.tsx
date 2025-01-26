@@ -4,6 +4,7 @@ import Slider from 'react-slick';
 import { MapPin, Calendar } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import '@/styles/homepage/PastEvents.css';
+import Image from 'next/image';
 
 // Helper function to manage image paths
 const getEventImage = (id, imageUrl) => {

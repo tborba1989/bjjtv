@@ -18,7 +18,7 @@ const ContactSection = () => {
     message: ''
   });
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus({ loading: true, success: false, error: false, message: '' });
 
@@ -45,7 +45,7 @@ const ContactSection = () => {
       });
       setFormData({ name: '', email: '', phone: '', message: '' });
 
-    } catch (error) {
+    } catch {
       setStatus({
         loading: false,
         success: false,
@@ -55,7 +55,7 @@ const ContactSection = () => {
     }
   };
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -149,11 +149,11 @@ const ContactSection = () => {
                 value={formData.message}
                 onChange={handleChange}
                 placeholder="Sua Mensagem"
-                rows="4"
+                rows={4}
                 className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition duration-200"
                 required
                 disabled={status.loading}
-              ></textarea>
+              />
             </div>
 
             <div>

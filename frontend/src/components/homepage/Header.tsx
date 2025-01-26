@@ -1,6 +1,7 @@
 // src/components/homepage/Header.tsx
 'use client'
 import '../../styles/homepage/Header.css'
+import Image from 'next/image';
 import { FaMapMarkerAlt, FaClock } from 'react-icons/fa'
 
 export default function Header() {
@@ -8,7 +9,14 @@ export default function Header() {
    <header className="header">
      <nav className="header-content">
        <div className="logo">
-         <img src="/images/rnbjj-logo.png" alt="RN BJJ" width={120} height={40} />
+         <Image
+          src="/images/rnbjj-logo.png"
+          alt="RN BJJ TV"
+          width={120}
+          height={40}
+          priority  // importante para o logo que é above the fold
+          className="w-auto h-auto"
+        />
        </div>
 
        <div className="right-section">

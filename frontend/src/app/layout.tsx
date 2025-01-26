@@ -1,6 +1,5 @@
 // src/app/layout.tsx
 import Header from '@/components/homepage/Header'
-import MainBanner from '@/components/homepage/MainBanner'
 import './globals.css'
 
 export default function RootLayout({
