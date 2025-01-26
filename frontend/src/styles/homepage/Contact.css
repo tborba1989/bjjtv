@@ -1,0 +1,172 @@
+/* frontend/src/styles/Contact.css */
+
+/* Animações de entrada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.contact-section {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Customização dos inputs */
+.contact-input {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.contact-input:focus {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+}
+
+/* Customização do botão */
+.submit-button {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.submit-button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translate(-50%, -50%) rotate(45deg) scale(0);
+  transition: transform 0.6s ease;
+}
+
+.submit-button:hover::before {
+  transform: translate(-50%, -50%) rotate(45deg) scale(1);
+}
+
+/* Efeito de loading */
+.loading-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+}
+
+/* Animação para alertas */
+.alert-enter {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.alert-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.alert-exit {
+  opacity: 1;
+}
+
+.alert-exit-active {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 300ms, transform 300ms;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 3rem 1rem;
+  }
+
+  .form-container {
+    width: 100%;
+    padding: 1.5rem;
+  }
+}
+
+/* Efeitos de hover para campos de input */
+.contact-input:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Estilo para placeholder */
+.contact-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  transition: color 0.3s ease;
+}
+
+.contact-input:focus::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Estilo para quando o formulário está desabilitado */
+.contact-form.disabled {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+/* Efeito de pulsação para o botão de loading */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.loading-button {
+  animation: pulse 1.5s infinite;
+}
+
+/* Efeito de sucesso */
+.success-message {
+  animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Estilização do scrollbar do textarea */
+textarea.contact-input {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+}
+
+textarea.contact-input::-webkit-scrollbar {
+  width: 6px;
+}
+
+textarea.contact-input::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+textarea.contact-input::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+}
+
+/* Efeito de foco para acessibilidade */
+.contact-input:focus-visible {
+  outline: none;
+  ring: 2px;
+  ring-color: rgba(59, 130, 246, 0.5);
+}

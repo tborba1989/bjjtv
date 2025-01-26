@@ -1,0 +1,95 @@
+/* Sponsors.css */
+
+/* Estilos globais para o slider de patrocinadores */
+.sponsors-swiper {
+  position: relative;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.sponsors-swiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  height: auto;
+  transition: all 0.3s ease;
+}
+
+.sponsor-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.sponsor-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.sponsor-image-container {
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Customização dos controles do Swiper */
+.sponsors-swiper .swiper-button-next,
+.sponsors-swiper .swiper-button-prev {
+  color: #2563eb !important;
+  background-color: rgba(37, 99, 235, 0.1);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.sponsors-swiper .swiper-button-next:hover,
+.sponsors-swiper .swiper-button-prev:hover {
+  background-color: rgba(37, 99, 235, 0.2);
+}
+
+.sponsors-swiper .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: #cbd5e1;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.sponsors-swiper .swiper-pagination-bullet-active {
+  width: 20px;
+  border-radius: 10px;
+  background: #2563eb;
+  opacity: 1;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .sponsors-swiper .swiper-slide {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .sponsor-card {
+    max-width: 100%;
+  }
+}
+
+/* Animações sutis */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.sponsors-swiper .swiper-slide {
+  animation: fadeIn 0.6s ease forwards;
+}

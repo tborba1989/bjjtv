@@ -1,0 +1,59 @@
+/* src/styles/homepage/About.css */
+.about {
+ padding: 5rem 0;
+ background-color: #fff;
+}
+
+.about-container {
+ max-width: 1200px;
+ margin: 0 auto;
+ display: flex;
+ gap: 4rem;
+ padding: 0 1rem;
+}
+
+.about-text {
+ flex: 1;
+}
+
+.about-text h2 {
+ font-size: 2.5rem;
+ font-weight: bold;
+ margin-bottom: 1rem;
+ color: #000;
+}
+
+.about-text h3 {
+ font-size: 1.5rem;
+ color: #4B5563;
+ margin-bottom: 2rem;
+}
+
+.about-content p {
+ margin-bottom: 1.5rem;
+ line-height: 1.7;
+ color: #4B5563;
+ text-align: justify;
+}
+
+.about-image {
+ flex: 1;
+ position: relative;
+ padding: 1rem;
+}
+
+.about-image::before {
+ content: '';
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ border: 8px solid #FCD34D;
+}
+
+.about-image img {
+ width: 100%;
+ height: auto;
+ position: relative;
+}

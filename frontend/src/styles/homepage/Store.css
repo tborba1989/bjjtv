@@ -1,0 +1,48 @@
+/* Store.css */
+
+.store-container {
+  background-size: cover;
+  background-position: center;
+  padding: 100px 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.store-content h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.store-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.btn-loja {
+  background-color: #ffc107;
+  color: #000;
+  padding: 15px 30px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-loja:hover {
+  background-color: #ff9800;
+}
+
+@media (min-width: 768px) {
+  .store-container {
+    padding: 160px 20px;
+  }
+
+  .store-content h1 {
+    font-size: 4rem;
+  }
+
+  .store-content p {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,78 @@
+/* Styles for Events Component */
+
+.events-slider {
+  padding: 20px 0;
+}
+
+.events-slider .slick-slide {
+  padding: 0 10px;
+}
+
+.events-slider .slick-prev,
+.events-slider .slick-next {
+  z-index: 2;
+  color: #2563eb;
+}
+
+.events-slider .slick-dots li button:before {
+  color: #2563eb;
+}
+
+.events-slider .slick-dots li.slick-active button:before {
+  color: #1d4ed8;
+}
+
+.event-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.event-card img {
+  border-bottom: 2px solid #facc15;
+}
+
+.event-card .absolute {
+  background: rgba(250, 204, 21, 0.9);
+  color: #000;
+  font-weight: bold;
+}
+
+/* Title Styles */
+.events-title {
+  font-size: 2rem;
+  color: #000; /* Título em preto */
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Championship Name Styles */
+.event-card .event-name {
+  font-size: 1.25rem;
+  color: #333; /* Nome do campeonato em fonte mais escura */
+  font-weight: 600;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.loader {
+  width: 50px;
+  height: 50px;
+  border: 4px solid #2563eb;
+  border-top: 4px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
