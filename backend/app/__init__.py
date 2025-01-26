@@ -1,5 +1,5 @@
 # app/__init__.py
-from flask import Flask, request
+from flask import Flask, request, send_from_directory
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from flask_cors import CORS
@@ -13,7 +13,7 @@ db = SQLAlchemy()
 migrate = Migrate()
 
 def create_app():
-    app = Flask(__name__)
+    app = Flask(__name__, static_folder="../frontend/build", static_url_path="/")
 
     # Configuração CORS usando variáveis de ambiente
     CORS(app, resources={
@@ -55,5 +55,13 @@ def create_app():
     app.register_blueprint(competicoes)
     app.register_blueprint(inscricoes)
     app.register_blueprint(patrocinadores)
+
+    # Rota para servir o frontend
+    @app.route("/")
+    @app.route("/<path:path>")
+    def serve_frontend(path=""):
+        if path and os.path.exists(os.path.join(app.static_folder, path)):
+            return send_from_directory(app.static_folder, path)
+        return send_from_directory(app.static_folder, "index.html")
 
     return app
