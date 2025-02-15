@@ -1,0 +1,37 @@
+/* frontend/src/styles/homepage.css */
+
+.home-container {
+    text-align: center;
+    padding: 50px;
+}
+
+.hero-section {
+    background-color: #111;
+    color: #fff;
+    padding: 100px 20px;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.btn-primaria {
+    background-color: #ff0000;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn-primaria:hover {
+    background-color: #cc0000;
+}
+
+/* Removido qualquer estilo relacionado ao header para evitar conflito */

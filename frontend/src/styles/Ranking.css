@@ -1,0 +1,56 @@
+/* src/styles/Ranking.css */
+
+.rankingSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
+.rankingContainer {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.powerbiContainer {
+  width: 100%;
+  height: 80vh; /* Ajuste a altura */
+}
+
+.powerbiFrame {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.loadingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh; /* Mesma altura do iframe */
+}
+
+.loader {
+  border: 4px solid #f3f3f3; /* Cor de fundo */
+  border-top: 4px solid #3498db; /* Cor do indicador */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 2s linear infinite;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Animação do loader */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

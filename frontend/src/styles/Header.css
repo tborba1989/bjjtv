@@ -1,0 +1,65 @@
+/* frontend/src/styles/Header.css */
+
+header, .header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px !important;
+  background-color: #1c1c1c !important; /* Cinza escuro */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-container .logo {
+  height: 40px !important;
+}
+
+.subtitle {
+  font-size: 0.75rem;
+  color: #ccc;
+  text-transform: uppercase;
+}
+
+.info-container {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+.portal-button {
+  background-color: transparent;
+  color: #ccc;
+  padding: 6px 14px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.portal-button:hover {
+  background-color: #ffc107;
+  color: #000;
+}
+
+body {
+  padding-top: 60px !important; /* Ajustado para o header mais fino */
+}

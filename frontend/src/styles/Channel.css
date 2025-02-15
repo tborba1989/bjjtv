@@ -1,0 +1,48 @@
+/* frontend/src/styles/Channel.css */
+
+.channel-section {
+  position: relative;
+  text-align: center;
+  color: #fff;
+}
+
+.channel-image {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 400px;
+}
+
+.channel-content {
+  margin-top: -150px;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: inline-block;
+  padding: 30px 50px;
+  border-radius: 8px;
+}
+
+.channel-content h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.channel-content p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.subscribe-button {
+  background-color: #ff0000;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.subscribe-button:hover {
+  background-color: #cc0000;
+}

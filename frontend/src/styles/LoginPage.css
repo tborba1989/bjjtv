@@ -1,0 +1,88 @@
+/* src/styles/LoginPage.css */
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #ffffff; /* Fundo mais escuro */
+}
+
+.login-card {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 320px;
+  margin-bottom: 40px; /* Espaço entre o form e o footer */
+}
+
+.logo-wrapper {
+  background-color: #222;
+  padding: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-bottom: 20px; /* Mais espaço abaixo da logo */
+}
+
+.login-logo {
+  width: 100px;
+}
+
+.login-card h2 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.login-card input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.primary-button {
+  width: 100%;
+  padding: 8px;
+  background-color: #ffc107;
+  border: none;
+  color: #000;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 0.9rem;
+  margin-bottom: 12px; /* Espaço após o botão Entrar */
+}
+
+.primary-button:hover {
+  background-color: #e0a800;
+}
+
+.link-button {
+  background-color: transparent;
+  color: #555;
+  border: none;
+  margin-top: 8px;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 0.85rem;
+  display: block;
+}
+
+.link-button:hover {
+  color: #ffc107;
+}
+
+/* Ajuste para o Footer ocupar toda a largura */
+footer {
+  width: 100%;
+  background-color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,65 @@
+/* frontend/src/styles/Team.css */
+
+.team-section {
+  padding: 60px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.team-section h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.team-member {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 15px rgba(255, 193, 7, 0.6);
+  border: 2px solid #ffc107;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px 10px 0 0;
+}
+
+.team-member h3 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.team-member p {
+  font-size: 1rem;
+  color: #888;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  margin: 0 5px;
+  color: #555;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ffc107;
+}
