@@ -2,8 +2,8 @@ from flask import Blueprint, request, jsonify, url_for
 from werkzeug.security import generate_password_hash, check_password_hash
 from functools import wraps
 from itsdangerous import URLSafeTimedSerializer, SignatureExpired, BadSignature
-from app.models.models import Usuario, db
-from app.utils import gerar_token, verificar_token
+from backend.app.models.models import Usuario, db
+from backend.app.utils import gerar_token, verificar_token
 from flask_cors import CORS
 
 # Blueprint para autenticação

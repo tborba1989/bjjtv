@@ -1,6 +1,6 @@
 # routes/patrocinadores.py
 from flask import Blueprint, jsonify
-from app.models.models import Patrocinador
+from backend.app.models.models import Patrocinador
 
 patrocinadores = Blueprint('patrocinadores', __name__)
 

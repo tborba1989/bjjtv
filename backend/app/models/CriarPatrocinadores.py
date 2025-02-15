@@ -1,5 +1,5 @@
-from app import db
-from app.models.models import Patrocinador
+from backend.app import db
+from backend.app.models.models import Patrocinador
 from datetime import datetime
 
 # Função para adicionar patrocinadores fictícios

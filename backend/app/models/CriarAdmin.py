@@ -4,8 +4,8 @@ import os
 # Adiciona o diretório pai ao PYTHONPATH
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from app import create_app, db
-from app.models.models import Usuario
+from backend.app import create_app, db
+from backend.app.models.models import Usuario
 from werkzeug.security import generate_password_hash
 
 app = create_app()

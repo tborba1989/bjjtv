@@ -1,5 +1,5 @@
-from app import db, create_app  # Certifique-se de que `create_app` está no caminho correto
-from app.models.models import Competicao  # Ajuste o caminho para o modelo
+from backend.app import db, create_app  # Certifique-se de que `create_app` está no caminho correto
+from backend.app.models.models import Competicao  # Ajuste o caminho para o modelo
 from datetime import datetime
 
 # Criar 6 eventos inativos (status=False)

@@ -1,1 +1,1 @@
-from .auth import auth
+from backend.app.routes.auth import auth

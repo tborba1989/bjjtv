@@ -41,12 +41,12 @@ def create_app():
     db.init_app(app)
     migrate.init_app(app, db)
 
-    from app.routes.auth import auth
-    from app.routes.atletas import atletas
-    from app.routes.inscricoes import competicoes
-    from app.routes.inscricoes import inscricoes
-    from app.routes.inscricoes import categorias
-    from app.routes.patrocinadores import patrocinadores
+    from backend.app.routes.auth import auth
+    from backend.app.routes.atletas import atletas
+    from backend.app.routes.inscricoes import competicoes
+    from backend.app.routes.inscricoes import inscricoes
+    from backend.app.routes.inscricoes import categorias
+    from backend.app.routes.patrocinadores import patrocinadores
 
     app.register_blueprint(auth)
     app.register_blueprint(atletas)

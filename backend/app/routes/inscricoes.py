@@ -1,8 +1,8 @@
 from flask import Blueprint, request, jsonify, current_app
 from datetime import datetime
-from app import db
-from app.models.models import Atleta, Competicao, Inscricao, Categoria
-from app.services.services import get_categorias_disponiveis
+from backend.app import db
+from backend.app.models.models import Atleta, Competicao, Inscricao, Categoria
+from backend.app.services.services import get_categorias_disponiveis
 from PIL import Image
 from werkzeug.utils import secure_filename
 import io

@@ -1,5 +1,5 @@
 from datetime import date
-from app.models.models import Categoria, Atleta
+from backend.app.models.models import Categoria, Atleta
 
 
 def get_ordem_divisoes():

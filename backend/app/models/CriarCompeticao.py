@@ -1,5 +1,5 @@
-from app import db
-from app.models.models import Competicao
+from backend.app import db
+from backend.app.models.models import Competicao
 from datetime import datetime
 
 def criar_competicoes_simuladas():

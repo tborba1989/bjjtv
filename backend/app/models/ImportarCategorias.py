@@ -2,9 +2,9 @@
 
 import pandas as pd
 import os
-from app import create_app
-from app import db
-from app.models.models import Categoria
+from backend.app import create_app
+from backend.app import db
+from backend.app.models.models import Categoria
 from datetime import datetime
 
 

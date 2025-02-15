@@ -1,6 +1,6 @@
 from flask import Blueprint, request, jsonify
 from datetime import datetime
-from app.models.models import db, Atleta
+from backend.app.models.models import db, Atleta
 from flask_cors import CORS, cross_origin
 
 atletas = Blueprint('atletas', __name__)
